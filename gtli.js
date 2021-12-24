@@ -12,9 +12,9 @@
 (function(){
     const nowDate = new Date();
     console.log(nowDate.toTimeString().substring(0,8));
-    // const autoSigninFlag = JSON.parse(localStorage.getItem('autoSignin')) || {};
-    // const sessionDay = autoSigninFlag.sessionDay;
-    // const sessionMonth = autoSigninFlag.sessionMonth;
+    const autoSigninFlag = JSON.parse(localStorage.getItem('autoSignin')) || {};
+    const sessionDay = autoSigninFlag.sessionDay;
+    const sessionMonth = autoSigninFlag.sessionMonth;
     if (nowDate.getDay() !== sessionDay || nowDate.getMonth() !== sessionMonth) {
         if(location.href === 'https://www.gtloli.gay/home.php?mod=task'){
             console.log('任务页面!');
