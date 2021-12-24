@@ -1,0 +1,10 @@
+{
+  "name": "gtll",
+  "version": "1.0.0",
+  "description": "哥特动漫王国12点自动打开网页",
+  "main": "index.js",
+  "author": "JiuYan",
+  "dependencies": {
+    "node-schedule": "^2.1.0"
+  }
+}
