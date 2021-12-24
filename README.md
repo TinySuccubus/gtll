@@ -4,10 +4,7 @@
 ## 网页自动签到
 通过油猴脚本模拟网页点击实现自动签到
 
-找到目录中的gtll.js文件，右键选择编辑，复制所有内容，浏览器下载 [油猴脚本](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) 插件，选择添加新脚本，清空默认样本，粘贴复制的内容上去，`CTRL`+`S`保存代码，并且在设置界面，运行时期选择`document-end`，刷新首页即可自动签到
-
-![img.png](img.png)
-![img_2.png](img_2.png)
+浏览器下载 [油猴脚本](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) 插件，安装 [自动签到脚本](https://greasyfork.org/zh-CN/scripts/437544-%E5%93%A5%E7%89%B9%E5%8A%A8%E6%BC%AB%E7%8E%8B%E5%9B%BD%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0) ，刷新首页即可自动签到
 
 ## 自动打开网页
 通过Node实现自动打开网页，每天打开的时间通过index.js文件控制
