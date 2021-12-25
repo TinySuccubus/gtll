@@ -29,7 +29,7 @@ function setTime(){
 	ss = parseInt(HHmmss.substring(6,8))
 	HHmmss = (HH * 10000)+(mm * 100)+ss;
 	console.log(HH,":",mm,":",ss,",",HHmmss);
-	HHmmss = (HHmmss == 235959) ? 0 : HHmmss+1;
+	return HHmmss = (HHmmss == 235959) ? 0 : HHmmss+1;
 }
 
 console.log("Runing...")
@@ -38,25 +38,25 @@ const signTask = () => {
     schedule.scheduleJob('59 59 23 * * *', () => {
     	//签到（尽量最快速度）
     	req.exec('google-chrome '+checkinURL)
-        console.log("-----> \"" + nowTime + "\" -开始签到<-----");
+        console.log("-----> \"" + setTime() + "\" -开始签到<-----");
         setTime();
         while(HHmmss < checkinTime){
 		req.exec('google-chrome '+checkinURL)
 		setTime();
 	}
 	//领低保
-	console.log("-----> \"" + nowTime + "\" -开始领低保<-----");
+	console.log("-----> \"" + setTime() + "\" -开始领低保<-----");
 	req.exec('google-chrome https://www.gtloli.gay/home.php?mod=task&do=apply&id=32')
 	req.exec('google-chrome https://www.gtloli.gay/home.php?mod=task&do=apply&id=33')
 	setTimeout(function (){
 		req.exec('google-chrome https://www.gtloli.gay/home.php?mod=task&do=draw&id=32')
 		req.exec('google-chrome https://www.gtloli.gay/home.php?mod=task&do=draw&id=33')
 	},1000)
-	console.log("-----> \"" + nowTime + "\" -消除低保后2条系统消息<-----");
+	console.log("-----> \"" + setTime() + "\" -消除低保后2条系统消息<-----");
 	setTimeout(function (){
 		req.exec('google-chrome https://www.gtloli.gay/home.php?mod=space&do=notice&view=system')
 	},5000)
-	console.log("-----> \"" + nowTime + "\" -全部完成<-----");
+	console.log("-----> \"" + setTime() + "\" -全部完成<-----");
     })
 }
 signTask()
